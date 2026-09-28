@@ -1,3 +1,5 @@
+# Video Link:
+https://youtu.be/TyutXH53sgA
 # Michael Ko - Project 1 Repository
 This is my Project 1 Repository which involves making a project (creative, up to me) that goes over topics from Chapters 1-7 of the Python Crash Course (Third Edition) Textbook.
 ## Ideas
@@ -28,3 +30,5 @@ This is my Project 1 Repository which involves making a project (creative, up to
 - Need a way to seperate different classes...?
 ## Chosen Project:
 - Chosen Project is Grocery/Budget Tracker (as of 09/26/2026)
+## Presentation Link: 
+https://studentcscc-my.sharepoint.com/:p:/r/personal/mko1_student_cscc_edu/Documents/Michael%20Ko%20-%20Project%201%20(Chapters%201-7)%20Presentation%20Slides.pptx?d=wfb418402b3804afba252ad4cf8f50ed9&csf=1&web=1&e=GjeYGC&nav=eyJzSWQiOjI1NiwiY0lkIjozODA0NjQwMDc5fQ
