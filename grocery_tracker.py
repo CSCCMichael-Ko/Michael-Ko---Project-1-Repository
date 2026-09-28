@@ -1,9 +1,9 @@
 """
 Name: Michael Ko
-Project Name: grocery.tracker.py
+Project Name: grocery_tracker.py
 Class: CSCI-1511-W03L (Python Programming)
 Professor: Travis Burke
-Date: 09/25/2026
+Date: 09/27/2026
 Purpose: Tracking groceries by category and comparing whats bought against a budget. Tried to incorporate elements/topics within Chapters 1-7 of the Python Crash Course (Third Edition) Textbook.
 Starter Code: None, did search up how to incorporate rounding float to two decimal points. 
 """
@@ -18,20 +18,24 @@ cart = {}
 
 i = 0
 while i < len(categories):
+    """Giving every category an empty list to add a new item to it later"""
     cart[categories[i]] = []
     i += 1
 
 print(f"Hi {shopper_name}, your budget is ${budget:.2f}\n")
 
-"""While loop over the list"""
 index = 0
 while index < len(categories):
+    """Outputting each category one at a time"""
     category = categories[index]
     print(f"--- {category} ---")
 
     shopping = True
     while shopping:
-        """Goes through categories one at a time and allows one to add as many items to each category"""
+        """
+        Goes through categories one at a time and allows one to add as many items to each category.
+        Keeps asking until the user says "no" for this category
+        """
         response = input(f"Add an item to {category}? (yes/no): ").lower()
         
         if response == "yes":
@@ -48,16 +52,22 @@ while index < len(categories):
 
 total_spent = 0
 print("\n=== Receipt ===")
+
 category_index = 0
 while category_index < len(categories):
-    """Nested while loop, outer loop picks category and uses it as key from dictionary"""
+    """Goes through each category within the dictionary; dictionary keys"""
     category = categories[category_index]
-    items = sorted(cart[category])
+    items = sorted(cart[category]) 
+
     if items:
+        """Only printing categories that actually have items"""
         print(f"\n{category}:")
         item_index = 0
         while item_index < len(items):
-            """"""
+            """
+            Prints item and adds its price to total_spent
+            Splits item into its name and price
+            """
             name, price = items[item_index]
             print(f"  {name}: ${price:.2f}")
             total_spent += price
@@ -68,8 +78,6 @@ while category_index < len(categories):
 remaining = budget - total_spent
 if remaining < 0:
     print(f"\nOver budget by ${abs(remaining):.2f}!")
-elif remaining < 10:
-    print(f"\nCutting it close — ${remaining:.2f} left.")
 else:
     print(f"\nNice job — ${remaining:.2f} left in budget.")
 
